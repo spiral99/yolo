@@ -1,6 +1,7 @@
 version: '3.7'
 services:
   client:
+    image: yolo-client:v1
     build:
       context: ./client
       dockerfile: Dockerfile
@@ -11,6 +12,7 @@ services:
       - frontend_network
 
   backend:
+    image: yolo-backend:v1
     build:
       context: ./backend
       dockerfile: Dockerfile
