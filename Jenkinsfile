@@ -27,8 +27,8 @@ pipeline {
             steps {
                 // Use Docker Compose to deploy your application
                 script {
-                    sh 'sudo docker-compose down' // Ensure any previous containers are stopped and removed
-                    sh 'sudo docker-compose up -d' // Run containers in the background
+                    sh 'docker-compose down' // Ensure any previous containers are stopped and removed
+                    sh 'docker-compose up -d' // Run containers in the background
                 }
             }
         }
@@ -40,7 +40,7 @@ pipeline {
                 echo "Waiting for ${CLEANUP_WAIT_TIME} minutes before cleanup..."
                 timeout(time: CLEANUP_WAIT_TIME, unit: 'MINUTES') {
                     // Perform cleanup after waiting for the specified duration
-                    sh 'sudo docker-compose down'
+                    sh 'docker-compose down'
                 }
             }
         }
