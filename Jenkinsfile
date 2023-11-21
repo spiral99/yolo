@@ -19,7 +19,7 @@ pipeline {
         stage('Clone repository') {
             steps {
                 // Checkout the repository
-                git 'https://github.com/spiral99/gallery.git'
+                git 'https://github.com/spiral99/yolo.git'
             }
         }
         stage('Deploy') {
