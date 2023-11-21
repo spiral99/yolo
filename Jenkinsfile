@@ -16,6 +16,12 @@ pipeline {
                 checkout scm
             }
         }
+        stage('Clone repository') {
+            steps {
+                // Checkout the repository
+                git 'https://github.com/spiral99/gallery.git'
+            }
+        }
         stage('Deploy') {
             steps {
                 // Use Docker Compose to deploy your application
