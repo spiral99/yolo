@@ -4,9 +4,9 @@ pipeline {
     environment {
         // Define variables for Docker image and container name
         DOCKER_IMAGE = 'yolo:latest'
-        DOCKER_CONTAINER_NAME = 'yolo-frontend'
-        DOCKER_CONTAINER_NAME = 'yolo-backend'
-        DOCKER_CONTAINER_NAME = 'yolo-mongo'
+        DOCKER_CONTAINER_NAME1 = 'yolo-frontend'
+        DOCKER_CONTAINER_NAME2 = 'yolo-backend'
+        DOCKER_CONTAINER_NAME3 = 'yolo-mongo'
     }
 
     stages {
